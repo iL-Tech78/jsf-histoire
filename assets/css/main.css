@@ -247,7 +247,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 15px;
+    font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 500;
     display: flex;
@@ -255,7 +255,6 @@ h6 {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
-    text-transform: uppercase;
   }
 
   .navmenu a i,
@@ -1028,7 +1027,7 @@ section,
 .about .about-description {
   margin-bottom: 1rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .about .feature-list-wrapper {
@@ -1958,7 +1957,20 @@ section,
   bottom: -1.1rem;
   left: .7rem;
 }
+
+.double-lines-realisations {
+  position: absolute;
+  width: 170px;
+  bottom: -1.3rem;
+  left: 2.5rem;
+}
+
 @media (max-width: 768px) {
+  .double-lines-realisations{
+    width: 140px;
+    bottom: -1.1rem;
+    left: 1.5rem;
+  }
   .double-lines-adn {
     width: 105px;
     bottom: -0.8rem;
@@ -2312,4 +2324,63 @@ section,
   .section-title-left{
     text-align: left;
   }
+}
+
+/*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+.resume .resume-title {
+  color: var(--heading-color);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--accent-color);
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  /* padding: 5px 15px; */
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
 }
